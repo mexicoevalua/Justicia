@@ -13,7 +13,9 @@ data  <- read.csv("data/justicia.csv", as.is=T, encoding="utf8")
 pdf("images/justicia2014.pdf", width=7.7, height=7.7)
 textplot(data$fuero_comun,data$fuero_federal, data$abreviatura,xlim=c(min(data$fuero_comun),
   max(data$fuero_comun)), ylim=c(min(data$fuero_federal),max(data$fuero_federal)), show.lines=T, cex=1) + 
-  title(main = "Porcentaje de reclusos en proceso (sin sentencia) \n  de los fueros común y federal en 2014")
+  title(main = "Porcentaje de reclusos en proceso (sin sentencia) \n  de los fueros común y federal en 2014", 
+        xlab = "Porcentaje de presos sin sentencia fuero común", 
+        ylab ="Porcentaje de presos sin sentencia fuero federal")
 grid(NULL, lty =2, lwd =2)
 dev.off()
 
