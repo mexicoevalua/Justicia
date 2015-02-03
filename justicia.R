@@ -19,10 +19,6 @@ textplot(data$fuero_comun,data$fuero_federal, data$abreviatura,xlim=c(min(data$f
 grid(NULL, lty =2, lwd =2)
 dev.off()
 
-
-
-
-
 # Fuero común
 p  <- ggplot(data, aes(x=fuero_comun, y= reorder(abreviatura, fuero_comun))) + geom_point(size=3) 
 
@@ -48,12 +44,6 @@ png("images/federal2014.png",  width=567, height=567)
 p + ggtitle("Reclusos en proceso  (sin sentencia) del fuero federal") + 
   xlab("Porcentaje de reclusos, fuero federal") + ylab("Entidad") + mex_eval_theme
 dev.off()
-
-
-
-
-
-
 
 # Incidencia, prevalencia y percepción inseguridad (scatter plot)
 names(data)
